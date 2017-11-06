@@ -1,0 +1,21 @@
+.advantages-list {
+  margin-bottom: rem(-45);
+  p {
+    margin: 0;
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: rem(45);
+    &::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $green-1;
+      font-size: rem(50);
+      line-height: 1em;
+      height: rem(50);
+      margin: 0 0 rem(30);
+    }
+  }
+}

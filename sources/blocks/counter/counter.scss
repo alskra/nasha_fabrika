@@ -1,0 +1,42 @@
+.counter {
+  display: inline-flex;
+  vertical-align: top;
+  margin-bottom: 10px;
+
+  &__btn {
+    flex: none;
+    color: $gray;
+    font-size: 16px;
+    line-height: 1em;
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    &:hover, &:focus {
+      color: $green;
+      border-color: $green;
+    }
+
+    &_dec {
+      border-radius: 2px 0 0 2px;
+    }
+
+    &_inc {
+      border-radius: 0 2px 2px 0;
+    }
+  }
+
+  &__input {
+    overflow: hidden;
+    color: $gray;
+    font-size: 15px;
+    line-height: 36px;
+    text-align: center;
+    width: 43px;
+    padding: 0 5px;
+    background-color: #f9f9f9;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}

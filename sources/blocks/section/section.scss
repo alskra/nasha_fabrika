@@ -1,0 +1,42 @@
+.section {
+  $r: &;
+  padding: rem(25) 0;
+
+  &__title {
+    font-size: rem(30);
+    line-height: (42/38*1em);
+    text-align: center;
+    margin: 0 0 (35/38*1em);
+  }
+
+  &__order-step {
+    margin: 0 0 rem(35);
+  }
+
+  &__footer {
+    color: #004c66;
+    text-align: center;
+  }
+
+  &--bg-gray {
+    background: #f7f7f7;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: rem(60) 0;
+
+    &__title {
+      font-size: rem(38);
+      &--order {
+        margin-bottom: rem(60);
+      }
+    }
+
+    &__prod-list {
+      margin-top: rem(40);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+  }
+}

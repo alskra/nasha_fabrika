@@ -1,0 +1,7 @@
+mixin pagination()
+  .-pagination&attributes(attributes)
+    +a().__item._prev.glyphicon.glyphicon-left-angle-bracket
+    span.__item._current 1
+    +a().__item 2
+    +a().__item 3
+    +a().__item._next.glyphicon.glyphicon-right-angle-bracket

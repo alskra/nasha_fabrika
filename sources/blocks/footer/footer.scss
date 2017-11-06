@@ -1,0 +1,52 @@
+.footer {
+  $r: &;
+  color: white;
+  font-size: rem(14);
+  padding: rem(14) 0;
+  background-color: #2e5967;
+
+  &__lnk {
+    display: inline-block;
+    color: #67a9bf;
+    vertical-align: top;
+    margin: rem(4) 0;
+    &:hover, &:focus {
+      color: $blue-1;
+    }
+  }
+
+  &__tel {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: rem(28);
+    line-height: rem(30);
+    padding: 0 0 0 rem(45);
+    margin: rem(14) 0;
+    vertical-align: top;
+    &::before {
+      color: $blue-1;
+      font-size: rem(30);
+      margin: 0 0 0 rem(-45);
+      position: absolute;
+    }
+    &:hover, &:focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(18);
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__lnk {
+      margin-right: rem(28);
+    }
+
+    &__tel {
+      margin: 0;
+    }
+  }
+}

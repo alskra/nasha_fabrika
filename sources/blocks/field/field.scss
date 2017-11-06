@@ -1,0 +1,58 @@
+.field {
+  display: inline-block;
+  color: $body-color;
+  font-weight: $font-weight-normal;
+  font-size: rem(18);
+  line-height: 1.25em;
+  background: #ffffff;
+  transition: $transition-base, height;
+  height: rem(46);
+  padding: 0 rem(18);
+  border: 1px solid transparent;
+  vertical-align: top;
+  &::placeholder {
+    color: #3f788c;
+  }
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus,
+    &.ik_select_link_focus {
+      outline: 0;
+      border-color: $blue-1;
+    }
+  }
+  &:active,
+  &.active {
+    outline: 0;
+  }
+  @include disabled {
+    opacity: .65;
+    cursor: default;
+    pointer-events: none;
+  }
+  &[required], &.required {
+
+  }
+  &.parsley-error {
+    border-color: $red;
+  }
+
+  &--area {
+    resize: vertical;
+    overflow-y: auto;
+    min-height: rem(103);
+    padding-top: rem(13);
+    padding-bottom: rem(13);
+  }
+
+  &--1 {
+    color: white;
+    background: transparent;
+    border-color: white;
+    &::placeholder {
+      color: white;
+    }
+  }
+}

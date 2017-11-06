@@ -1,0 +1,12 @@
+.parsley-errors-list {
+  list-style: none;
+  color: $red;
+  font-size: rem(12);
+  line-height: 1.25;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: rem(3) 0;
+  }
+}

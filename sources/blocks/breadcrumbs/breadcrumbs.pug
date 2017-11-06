@@ -1,0 +1,11 @@
+mixin breadcrumbs(data)
+  nav.-breadcrumbs&attributes(attributes)
+    .-container-fluid
+      +a(pages.index.url).-breadcrumbs.__item Главная
+      span.-breadcrumbs.__divider &nbsp;/&#32;
+      each item, index in data
+        if index !== data.length - 1
+          +a(item.url).-breadcrumbs.__item=item.title
+          span.-breadcrumbs.__divider &nbsp;/&#32;
+        else
+          span.-breadcrumbs.__item=item.title

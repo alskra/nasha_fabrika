@@ -1,0 +1,51 @@
+.slider-img {
+  max-width: rem(970);
+  margin: 0 auto;
+  .slick-arrow {
+    color: #d0d0d0;
+    margin-top: rem(-22);
+    &:hover, &:focus {
+      color: $green-1;
+    }
+  }
+  .slick-dots {
+    margin: rem(33) 0 0;
+    position: relative;
+    bottom: auto;
+    li {
+      button {
+        background: #d0d0d0;
+      }
+      &.slick-active {
+        button {
+          background: #141414;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__img-wrap {
+    padding-top: percentage(3024/4032);
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 0 rem(100);
+    .slick-prev {
+      left: rem(0);
+    }
+    .slick-next {
+      right: rem(0);
+    }
+  }
+}

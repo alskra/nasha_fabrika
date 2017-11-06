@@ -1,0 +1,10 @@
+.logo {
+  $r: &;
+  display: block;
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

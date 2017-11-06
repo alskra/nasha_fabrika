@@ -1,0 +1,17 @@
+.form-label {
+  display: block;
+  text-align: left;
+  margin: 0;
+  &::before {
+    content: attr(data-content);
+    display: block;
+    overflow: hidden;
+    font-size: rem(12);
+    color: #232323;
+    letter-spacing: rem(1.2);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    margin: 0 0 rem(3);
+  }
+}

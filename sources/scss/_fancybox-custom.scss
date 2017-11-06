@@ -1,0 +1,36 @@
+.fancybox-bg {
+  background: #000000;
+  .fancybox-is-open & {
+    opacity: 0.6;
+  }
+}
+
+.fancybox-slide {
+  > div {
+    padding: rem(25);
+  }
+}
+
+.fancybox-arrow {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s, visibility 0s .25s;
+  .fancybox-show-nav & {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .25s, visibility 0s;
+  }
+}
+
+.fancybox-loading {
+  border: 6px solid $green-1;
+  border-top-color: transparent;
+}
+
+@include media-breakpoint-up(md) {
+  .fancybox-slide {
+    > div {
+      padding: rem(50);
+    }
+  }
+}

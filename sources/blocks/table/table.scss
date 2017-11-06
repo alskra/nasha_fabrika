@@ -1,0 +1,70 @@
+.table {
+  overflow-x: auto;
+  color: #004c66;
+  font-size: rem(16);
+
+  &__inner {
+    width: 100%;
+  }
+
+  th, td {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  th {
+    color: white;
+    font-weight: 900;
+    font-size: rem(14);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    background-color: #3f788c;
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+  }
+
+  td {
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+  }
+
+  thead {
+    tr {
+      &:first-child {
+        th {
+          &:first-child {
+            border-radius: rem(7) 0 0;
+          }
+          &:last-child {
+            border-radius: 0 rem(7) 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: $transition-base;
+      &:nth-child(odd) {
+        background-color: #f1fdfe;
+      }
+      &:hover {
+        color: white;
+        background: $blue-1;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    th, td {
+      &:first-child {
+        padding-left: percentage(100/1300);
+      }
+      &:last-child {
+        padding-right: percentage(100/1300);
+      }
+    }
+  }
+}

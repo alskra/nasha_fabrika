@@ -1,0 +1,6 @@
+mixin b-checkbox(data)
+  +b(`checkbox`, data, `label`)
+    +e(`input`, {}, `input`)(type='checkbox')&attributes(attributes)
+    +e(`ctrl`, {}, `span`).icon-check
+    +e(`label`, {}, `span`)
+      block

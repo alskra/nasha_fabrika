@@ -1,0 +1,38 @@
+mixin b-page(data)
+  doctype html
+  html(class='no-js' lang='ru')
+    head
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no')
+      //-meta(name='viewport' content='width=1024')
+      //-meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      title #{$.pages[$.set.page].title} — #{$.config.project.name}
+      // Meta
+      meta(name='description' content='')
+      meta(name='keywords' content='')
+      //-meta(name='author' content='')
+      // Favicons
+      //-!= $.faviconCode
+      // CSS
+      if $.isDevelopment
+        link(rel='stylesheet' href='css/core.css')
+        link(rel='stylesheet' href='css/blocks.css')
+      else
+        link(rel='stylesheet' href='css/app.min.css')
+      // JS Inline
+      script
+        include ../../../app_components/img-object-fit/img-object-fit.js
+    +b('page', data, 'body')&attributes(attributes)
+      block
+      //- SVG Inline
+      //-div(style='display: none')
+        //-include ../../img/icons.svg
+      // JS
+      //-script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap' async defer)
+      //-script(src='https://cdn.jsdelivr.net/jquery.goodshare.js/4/goodshare.min.js')
+      //-script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+      if $.isDevelopment
+        script(src='js/core.js')
+        script(src='js/blocks.js')
+      else
+        script(src='js/app.min.js')

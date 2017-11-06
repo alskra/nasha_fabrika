@@ -1,0 +1,13 @@
+mixin b-header(data)
+  +b(`header`, data, `header`)&attributes(attributes)
+    +e(`container`).container-fluid
+      +b(`logo`, {e: `header`}, `a`)(href=$.pages.index.url title=$.config.project.name)
+        +e(`img`, {}, `img`)(src=`img/logo.png` alt=$.config.project.name)
+      +b(`menu`, {e: `&`})
+        each item in [['О продукте', '#about'], ['Преимущества', '#advantages'], ['Модификации', '#mods'], ['Часто покупают', '#other'], ['Контакты', '#contacts']]
+          +e(`item`, {}, `a`)(href=item[1] title=item[0])= item[0]
+      +e(`tel`, {}, `a`).icon-phone(href=`tel:+74952301033` title=`Позвонить`)
+        span.d-none.d-md-inline +7 495 230 10 33
+      +e(`toggle-menu`, {}, `button`).d-lg-none
+        +e(`toggle-menu-line`, {}, `span`)
+    block

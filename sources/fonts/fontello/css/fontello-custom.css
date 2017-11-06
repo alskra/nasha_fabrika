@@ -1,0 +1,5 @@
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  line-height: inherit;
+  width: auto;
+  margin: 0;
+}

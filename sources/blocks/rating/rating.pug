@@ -1,0 +1,12 @@
+mixin rating(value)
+  .-rating(class=`rating_value_${value}`)&attributes(attributes)
+    .__item(title='1')
+      <svg class="rating__svg"><use href="#star"></use></svg>
+    .__item(title='2')
+      <svg class="rating__svg"><use href="#star"></use></svg>
+    .__item(title='3')
+      <svg class="rating__svg"><use href="#star"></use></svg>
+    .__item(title='4')
+      <svg class="rating__svg"><use href="#star"></use></svg>
+    .__item(title='5')
+      <svg class="rating__svg"><use href="#star"></use></svg>

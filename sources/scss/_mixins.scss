@@ -1,0 +1,20 @@
+@mixin media-pixel-ratio($dpr) {
+  @media (-webkit-min-device-pixel-ratio: $dpr), (min-resolution: $dpr*96dpi) {
+    @content;
+  }
+}
+
+@mixin disabled {
+    &:disabled,
+    &.disabled,
+    fieldset[disabled] & {
+      @content;
+    }
+}
+
+@mixin active {
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      @content;
+    }
+}

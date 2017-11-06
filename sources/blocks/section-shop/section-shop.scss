@@ -1,0 +1,31 @@
+.section-shop {
+  $r: &;
+  color: white;
+  background: url-img('bg-2.jpg') no-repeat 50% 50%/cover $blue-2;
+  padding: rem(100) 0;
+
+  &__title {
+    color: inherit;
+    font-size: rem(42);
+    line-height: (53/42*1em);
+    text-align: center;
+    margin: 0 0 (25/42*1em);
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: rem(60) 0;
+
+    &__title {
+      font-size: rem(48);
+    }
+
+    &__btn {
+      width: rem(197);
+    }
+  }
+}

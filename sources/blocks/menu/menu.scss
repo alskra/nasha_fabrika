@@ -1,0 +1,46 @@
+.menu {
+  background: white;
+
+  &__item {
+    display: block;
+    overflow: hidden;
+    color: $blue-2;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: 1em;
+    letter-spacing: 0.08em;
+    padding: rem(13) rem(15);
+    &:hover, &:focus {
+      color: $blue-1;
+      text-decoration: none;
+    }
+
+    &--current {
+      color: $blue-1;
+      background: linear-gradient(to bottom, $blue-1, $blue-1) no-repeat 0 0/#{rem(2)} 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    overflow: hidden;
+
+    &__item {
+      padding: rem(13) rem(10);
+
+      &--current {
+        background: linear-gradient(to right, $blue-1, $blue-1) no-repeat 0 0/100% #{rem(2)};
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__item {
+      margin: 0 rem(10);
+    }
+  }
+}

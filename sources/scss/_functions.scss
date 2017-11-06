@@ -1,0 +1,25 @@
+@function inline-img($path) {
+  @return url(inline-image('build/img/#{$path}'));
+}
+
+@function url-img($path) {
+  @return url('../img/#{$path}');
+}
+
+@function rem($number) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return $number/16*1rem;
+  }
+}
+
+@function em($number) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return $number*1em;
+  }
+}

@@ -1,0 +1,74 @@
+.get-price {
+  background: url-img('get-price-bg.jpg') no-repeat 50% 50%/cover;
+  padding: rem(45) 0;
+
+  &__title {
+    font-weight: $font-weight-light;
+    font-size: rem(31);
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: (50/42);
+    text-align: center;
+    margin: 0 0 1em;
+  }
+
+  &__row {
+
+  }
+
+  &__col-1 {
+    margin-bottom: rem(30);
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    &__title {
+      font-size: rem(42);
+    }
+
+    &__col-1 {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: rem(85) 0;
+
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      text-align: left;
+      margin: 0 30px 0 0;
+    }
+
+    &__row {
+      flex: none;
+      width: rem(500);
+      margin: 0 0 0 auto;
+    }
+
+    &__col-1 {
+      padding-left: 0;
+    }
+
+    &__col-2 {
+      padding-right: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+
+  }
+}

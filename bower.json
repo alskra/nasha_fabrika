@@ -1,0 +1,23 @@
+{
+  "name": "nasha_fabrika",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "alskra <krasnoyurchenko.a.s@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-mask-plugin": "^1.14.12",
+    "parsleyjs": "^2.8.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

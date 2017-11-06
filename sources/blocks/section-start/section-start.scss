@@ -1,0 +1,99 @@
+@keyframes price-pulse {
+  50% {
+    transform: scale(1.075);
+  }
+}
+
+.section-start {
+  $r: &;
+  background-color: #f7f7f7;
+
+  &__col-1 {
+    padding: rem(10) 0;
+    position: relative;
+  }
+
+  &__col-2 {
+    text-align: center;
+    padding: rem(22) 0 rem(44);
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__price-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__price {
+    display: inline-block;
+    overflow: hidden;
+    color: white;
+    font-weight: 700;
+    font-size: rem(34);
+    line-height: 1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: $red-1;
+    border-radius: rem(8);
+    animation: price-pulse 1.25s linear infinite;
+    max-width: 100%;
+    padding: rem(14) rem(19) rem(15);
+    vertical-align: top;
+  }
+
+  &__title {
+    font-size: rem(34);
+    line-height: (40/34);
+    margin: 0 0 (43/65*1em);
+  }
+
+  &__btn {
+    width: rem(197);
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    &__container {
+      display: flex;
+    }
+
+    &__col-1 {
+      flex: none;
+      width: 50%;
+      padding: rem(15) rem(15) rem(15) 0;
+      margin: auto 0;
+    }
+
+    &__col-2 {
+      text-align: left;
+      flex: none;
+      width: 50%;
+      padding: rem(15) 0 rem(15) rem(15);
+      margin: auto 0;
+    }
+
+    &__price-wrap {
+      bottom: rem(83);
+      left: 42%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__title {
+      font-size: rem(50);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__title {
+      font-size: rem(65);
+    }
+  }
+}

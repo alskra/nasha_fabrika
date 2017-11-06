@@ -1,0 +1,74 @@
+.checkbox {
+  $r: &;
+  display: inline-block;
+  font-size: rem(16);
+  line-height: 1.25em;
+  text-align: left;
+  margin: 0 0 0 rem(28);
+  vertical-align: top;
+  position: relative;
+
+  &__input {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    width: 0;
+    height: 0;
+    &:focus {
+      & ~ #{$r}__ctrl {
+        border-color: $blue-1;
+      }
+    }
+    &:checked {
+      & ~ #{$r}__ctrl {
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+    @include disabled {
+      & ~ #{$r}__icon {
+        opacity: .65;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $red-1;
+    border-radius: rem(4);
+    background-color: #fefefe;
+    width: rem(18);
+    height: rem(18);
+    cursor: pointer;
+    transition: $transition-base;
+    border: 1px solid transparent;
+    margin: rem(-9) 0;
+    position: absolute;
+    top: (1.25em/2);
+    left: rem(-28);
+    &::before {
+      font-size: rem(8);
+      line-height: 1em;
+      transition: inherit;
+      transform: scale(0);
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &.parsley-error {
+    & #{$r}__ctrl {
+      border-color: $red;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(17);
+  }
+}
